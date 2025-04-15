@@ -107,6 +107,9 @@ include_once('includes/config.php');
                 <div class="">
                     <a class="green-menu-link" href="our-mission.php">OUR MISSION</a>
                 </div>
+                <div class="">
+                    <a class="green-menu-link" href="contact-us.php">CONTACT US</a>
+                </div>
             </div>
         </div>
 
