@@ -1,0 +1,547 @@
+/*
+ *  Base Responsive CSS rules
+ *
+ *
+ *   1em == 16px == 0.17in == 12pt == 1pc == 4.2mm == 0.42cm
+ */
+
+
+/* SIMPLE CONTAINERS - Class: grid
+ * Simple Responsive Containers - Used for Basic grid layout only
+ * NO padding or margin rules for these
+ * Height is assumed to be fluid with top alignment(s)
+ * 'Names' based on width percentages, 100 == 100%, 050 == 50%, and so on,
+ * so gid-033 is a 33% column useful for three column layouts where internal
+ * spacing is controlled by children class(es).
+ *
+ * Complex Containers - Class: box
+ * Built in margins and padding
+ * Height is assumed to be fluid
+ * 'Names' based on width percentages, 100 == 100%, 050 == 50%, and so on,
+ * so box-033 is a 33% column useful for three column layouts
+ * NOTE: gutters are provided for by the class
+ *
+ * Rules DO NOT provide for tabular displays of more than 4 columns, rc.css does
+ */
+
+/*html {
+    -webkit-text-size-adjust: 100%;
+}*/
+
+/* Limit on actual display (text) area */
+.main-width-constraint, .main-width-constraint-noedge {
+	/*position: relative;
+	float: none;*/
+	/*display: inline-block;*/
+	margin: 0px auto !important;
+	padding: 0px !important;
+	width: 62.5em !important;     /* 1000/16 = 62.5 */
+}
+
+.main-width-constraint {
+	border:  1px solid #eaeaea;
+	border-top:   none;
+}
+
+/* Menu 'stuff' */
+body {
+    padding: 7.3em 0 0 0 !important;  /* SAME as menu_container height below */
+    margin: 0 !important;
+    font-size: 16px !important;
+  }
+
+ div {
+      border:  1px solid black;
+   }
+
+p { max-width: 100% !important; }
+
+#menu_container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 7.3em;
+  background: #fff;
+  z-index: 1000;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.menu_container {
+	/*visibility: hidden !important;*/
+	margin-top: 0px !important;
+}
+
+/*
+.shim { display: inline-block; height: .01em; color: transparent;}
+.shim:before { content: '.'; }
+*/
+
+.anchor {
+	display: block;
+	height: 7.3em; /*same height as #menu_container*/
+	margin-top: -7.3em; /*same height as #menu_container, but negative */
+	top: 0px !important;
+	color: transparent;
+/*	visibility: hidden;*/
+}
+.anchor:before { content: '.'; }
+
+
+#menu_logo {
+   margin: 0 1em 0 1em;  /* fiddle top and bottom whitespace for v-centering */
+	width: 17.1875em;     /* 275x51 actual. or 17.1875em x 3.1875em */
+	height: 3.1875em;
+}
+
+
+.logo-line-text {
+  margin: 1.5em 4em .5em 0;
+  float: right;
+  font-size: 1em;
+}
+
+
+/*
+  SIMPLE, ALL percentages with NO gutters at all.
+  These grid objects should go right to edge of their parent.
+  Use boxes to provide needed white space, etc. within grid classes.
+  These base definitions do NOT define minimum widths!
+  The assumption is that media queries below will address needed break points to prevent silliness....
+*/
+
+.grid-100,.grid-050,.grid-075,.grid-025,.grid-020,.grid-016,.grid-033,.grid-066,
+.grid-full,.grid-half,.grid-three-quarter,.grid-one-quarter,.grid-one-fifth,.grid-one-sixth,.grid-one-third,.grid-two-third
+{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+   page-break-before: avoid !important;
+   page-break-after: avoid !important;
+}
+
+.grid-100, .grid-full          { width: 100%;     }
+.grid-050, .grid-half          { width: 50%;      }
+.grid-075, .grid-three-quarter { width: 75%;      }
+.grid-025, .grid-one-quarter   { width: 25%;      }
+.grid-020, .grid-one-fifth		 { width: 20%;  }
+.grid-016, .grid-one-sixth		 { width: 16.666%;  }
+.grid-033, .grid-one-third     { width: 33.333%;  }  /*  300/16 = */
+.grid-066, .grid-two-third     { width: 66.666%;  }
+
+
+
+
+
+
+
+
+/* CONTENT DISPLAY BOXES */
+
+.box-100,
+.box-050,
+.box-033,
+.box-066,
+.box-025,
+.box-075,
+.box-016,
+.box-020 {
+	vertical-align: top;
+	display: inline-block;
+	margin: .25em 1.5% .25em 1.5%; /* margin: 0 2% 0 2%; padding: .5em 0 .5em 0 */
+   page-break-before: avoid !important;
+   page-break-after: avoid !important;
+}
+
+.box-100 { width: 96.000%; padding: 1% 0 1% 0;}
+.box-050 { width: 48.5%;    }   /*  (100 - (marg*2))/2 = 48.5%      400 / 16 = 25em     */
+.box-033 { width: 31.333%;  }  /*  (100 - (marg*4)/3 = 31.33       300 / 16 = 18.75em  */
+.box-066 { width: 65.667%;  }  /* 100 - 31.333 - (marg*2) = 65.667 600/16 = 35.9375em */
+.box-025 { width: 22.75%;   }  /* (100 - (marg*6))/4 =  22.75%     200/16 = 12.5em */
+.box-075 { width: 71.25%;   }  /* 100 - 22.75 - (marg*2) = 74.25   700/16 = 43.75em   */
+.box-016 { width: 13.666%;  }  /* (100 - (marg*6))/6 =  9.0%     200/16 = 12.5em */
+.box-020 { width: 17%;      }  /* (100 - (marg*5))/5 =  3.0%     200/16 = 12.5em */
+
+/* FIXME */
+.image-full {}
+.image-two-third {}
+.image-three-quarter {}
+.image-half {}
+.image-third {}
+.image-quarter {}
+.image-fifth {}
+.image-sixth { }
+
+.row-spacer-1em, .row-spacer-2em {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.scroll-to {
+   width: 100%;
+   height: .5em;
+}
+
+.auto-height { height: auto !important; }
+
+.row-spacer-025em, .vspace-025em,
+.row-spacer-050em, .vspace-050em,
+.row-spacer-075em, .vspace-075em {
+   width: 100%;
+   margin: 0 !important;
+   padding: 0 !important;
+   display: inline-block;
+   /*overflow: hidden;*/
+}
+
+.row-spacer-025em, .vspace-025em { line-height: .25em !important; vertical-align: top;}
+.row-spacer-050em, .vspace-050em { height: 0.5em  !important; }
+.row-spacer-075em, .vspace-075em { height: 1em !important; }
+
+.row-spacer-1em, .vspace-1em,
+.row-spacer-2em, .vspace-2em,
+.row-spacer-3em, .vspace-3em,
+.row-spacer-3em, .vspace-4em,
+.row-spacer-3em, .vspace-5em,
+.row-spacer-3em, .vspace-6em,
+.row-spacer-3em, .vspace-7em,
+.row-spacer-3em, .vspace-8em {
+	width: 100%;
+	vertical-align: top;
+	display: inline-block;
+	height: 1em;
+	color: transparent !important;
+	/*color: #e0dede;*/  /* testing usage */
+}
+
+/*.row-spacer-025em:before, .vspace-025em:before,
+.row-spacer-050em:before, .vspace-050em:before,
+.row-spacer-075em:before, .vspace-075em:before,*/
+
+.row-spacer-1em:before, .vspace-1em:before,
+.row-spacer-2em:before, .vspace-2em:before,
+.row-spacer-3em:before, .vspace-3em:before,
+.row-spacer-3em:before, .vspace-4em,
+.row-spacer-3em:before, .vspace-5em:before,
+.row-spacer-3em:before, .vspace-6em:before,
+.row-spacer-3em:before, .vspace-7em:before,
+.row-spacer-3em:before, .vspace-8em:before { content: '..'; }
+
+
+
+
+.row-spacer-1em, .vspace-1em { height: 1em; }
+.row-spacer-2em, .vspace-2em { height: 2em; }
+.row-spacer-3em, .vspace-3em { height: 3em; }
+.row-spacer-2em, .vspace-4em { height: 4em; }
+.row-spacer-3em, .vspace-5em { height: 5em; }
+.row-spacer-2em, .vspace-6em { height: 6em; }
+.row-spacer-3em, .vspace-7em { height: 7em; }
+.row-spacer-3em, .vspace-8em { height: 8em; }
+
+
+/* N/A for now -sjm ALL BASED ON 1000px and 1em == 16px */
+.col-spacer-1em, .hspace-1em,
+.col-spacer-2em, .hspace-2em,
+.col-spacer-3em, .hspace-3em,
+.col-spacer-4em, .hspace-4em,
+.col-spacer-5em, .hspace-5em {
+  content: '&nbsp;';
+  width: 1em;
+  height: 1em;
+  color: #e0dede;   /* testing usage */
+  vertical-align: top;
+  display: inline-block;
+}
+.col-spacer-2em, .hspace-2em { width: 2em; }
+.col-spacer-3em, .hspace-3em { width: 3em; }
+.col-spacer-4em, .hspace-4em { width: 4em; }
+.col-spacer-5em, .hspace-5em { width: 5em; }
+
+.content-block {  /* treat as a single colum, which it IS relative to it's parent */
+	vertical-align: top;
+	display: inline-block;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.col-50pct, .col-60pct, .col-70pct, .col-80pct, .col-90pct {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.col-50pct { width: 50%; }
+.col-60pct { width: 60%; }
+.col-70pct { width: 70%; }
+.col-80pct { width: 80%; }
+.col-90pct { width: 90%; }
+
+
+/* meant for use in content-blocks above so the blocks will expand to fill their parents using padding rules below */
+
+.hpad-1em, .hpad-2em, .hpad-3em, .hpad-4em, .hpad-5em {
+	vertical-align: top;
+	display: inline-block;
+	/*background: pink;*/
+}
+
+
+.hpad-1em { width: 96.8%;   padding-left: 1.6% !important; padding-right: 1.6% !important; }
+.hpad-2em { width: 93.6%;   padding-left: 3.2% !important; padding-right: 3.2% !important; }
+.hpad-3em { width: 90.4%;   padding-left: 4.8% !important; padding-right: 4.8% !important; }
+.hpad-4em { width: 87.2%;   padding-left: 6.4% !important; padding-right: 6.4% !important; }
+.hpad-5em { width: 84%;     padding-left: 8%   !important; padding-right: 8%   !important; }
+
+
+.height-1em   { height: 1em !important; }
+.height-1-5em   { height: 1.5em !important; }
+.height-2em   { height: 2em !important; }
+.height-2-5em   { height: 2.5em !important; }
+
+/*.pad-0-1 { padding-right: 1em; padding-left: 1em;}
+.pad-0-2 { padding-right: 2em; padding-left: 2em;}
+.pad-2-2 { padding: 2em 2em;}
+.pad-2-4 { padding: 2em 4em; }*/
+
+.pad-column-sides { padding-right: 1.25em; padding-left: 1.25em;}
+
+.first { margin-left: 0px !important }
+.last  { margin-right: 0px !important; }
+
+.image-left {
+  float: left;
+  margin-top: 1em;
+  margin-right: 1.25em;
+  margin-bottom: 1em;
+}
+.image-right {
+  float: right;
+  margin-top: 1em;
+  margin-left: 1.25em;
+  margin-bottom: 1em;
+}
+
+.media-center {} /* Hack to force centered content at reduced sizes */
+
+.margin-top-1 { margin-top: 1em; }
+.margin-right-1 { margin-right: 1em; }
+.margin-bottom-1 { margin-bottom: 1em; }
+
+.margin-left-1 { margin-left: 1em; }
+
+.clear { clear: both; }
+
+
+
+.inline { display: inline-block; }
+
+.mobile-show { display: none; }
+
+/* AND our media query nonsense for the above grid/box setups... */
+
+/*@media (min-width:20em) { *//* smartphones, iPhone, portrait 480x320 phones */
+/*@media (min-width:30.063em) { *//* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+/*@media (min-width:40.063em) { *//* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+/*@media (min-width:60.063em) { *//* tablet, landscape iPad, lo-res laptops ands desktops */
+/*@media (min-width:64.063em) {*/ /* big landscape tablets, laptops, and desktops */
+/*@media (min-width:80.063em) { *//* hi-res laptops and desktops */
+
+/*
+Hiddens - everything <= to size is hidden.
+Note that the 'Width' in the rule name is the MAXIMUM size for media queries....
+SO, if something is 673px, we use mobile-hide-640 to hide that 'thing' from 640 or less screens....
+*/
+.mobile-hide-288,  .mobile-hide-18em,
+.mobile-hide-320,  .mobile-hide-20em,
+.mobile-hide-480,  .mobile-hide-30em,
+.mobile-hide-640,  .mobile-hide-40em,
+.mobile-hide-800,  .mobile-hide-50em,
+.mobile-hide-1100, .mobile-hide-68em { display: inline-block; }
+
+/*
+AND then, wee need something to toggle on messages in most cases when the hides above are active
+So... these are paired with the above and in the example above we'd use mobile-show-640 to display messages or
+alternate content
+*/
+.mobile-show-288,  .mobile-show-18em,
+.mobile-show-320,  .mobile-show-20em,
+.mobile-show-480,  .mobile-show-30em,
+.mobile-show-640,  .mobile-show-40em,
+.mobile-show-800,  .mobile-show-50em,
+.mobile-show-1100, .mobile-show-68em { display: none; }
+
+.no-mobile {  }
+
+
+
+/*.quote-dark-hdr-widget {
+   background: none !important;
+}*/
+
+input[type=text] { border: none !important;}
+
+.border-bottom-widget { border: none !important; }
+
+.fake-link { color: #262626 !important   ; }
+
+.onlyprint {
+   display: none;
+}
+
+@media  only print and (min-width: 50.001em ) and (max-width: 68.75em) { /* 800 - 1100 */
+
+	body {
+      padding: 0 !important;
+		background: none !important;
+		padding: 0px !important;
+      /*page-break-inside: avoid !important;*/
+      background: white;
+      font-size: 4px;
+	   font-size: 8pt;
+	}
+
+   /*div {*/
+   /*   page-break-before: avoid !important;*/
+   /*   page-break-after: avoid !important;*/
+   /*}*/
+
+   html, body {
+      height: auto;
+      /*page-break-inside: avoid !important;*/
+   }
+
+   /*#printme {*/
+   /*   margin-top: -20mm;*/
+   /*}*/
+   /**/
+   /*#printme, #summary {*/
+   /*   margin-top: -20mm;*/
+   /*}*/
+
+
+	#menu_container {
+		display: none !important;
+		/*position: relative !important;
+		height: 5.745em !important;*/
+	}
+
+	/*.shim { display: inline-block; height: 6.7em; }*/
+	.anchor {
+		display: none !important;
+		/*top: 0px !important;
+		/*position: relative !important;*/
+		/*font-size: .001em;
+		height: .001em !important;*/  /* Remember: #menu_container above is NOW inline,so....
+	   /*margin-top: -5.475em !important;*/
+	}
+
+	#menu_logo {
+      /*display: none !important;*/
+		/*margin: 0 .25em 0 .25em;
+		width: 12.890em !important;*/  /*  275px x 51px or 17.1875em x 3.1875em reduced by 25% */
+		/*height: 2.39em !important;*/
+	}
+
+	.logo-line-text {
+      display: none !important;
+		/*margin: .75em 3% .75em 0 !important;
+		background: #7F7700;*/ /* TESTING */
+		/*font-size: .9em;*/
+	}
+
+
+
+/*	.grid-100, .grid-075,.grid-066,.grid-050,.grid-033,.grid-025 {*/
+/*		max-width: 100%;*/
+/*      page-break-before: avoid !important;*/
+/*      page-break-after: avoid !important;*/
+/*		/*min-width: 19.5em !important;*/
+/*	}*/
+/**/
+/* .box-100,*/
+/*	.box-075*/
+/*	 {*/
+/*		width: 97.000%  !important; /* margin: 0 2% 0 2%; padding: .5em 0 .5em 0 */
+/*      page-break-before: avoid !important;*/
+/*      page-break-after: avoid !important;*/
+/*	}*/
+
+   .grid-100,.grid-050,.grid-075,.grid-025,.grid-020,.grid-016,.grid-033,.grid-066,
+   .grid-full,.grid-half,.grid-three-quarter,.grid-one-quarter,.grid-one-fifth,.grid-one-sixth,.grid-one-third,.grid-two-third
+{
+   page-break-inside: avoid !important;
+   page-break-before: avoid !important;
+   page-break-after: avoid !important;
+   font-size: 9pt !important;
+}
+
+
+/* CONTENT DISPLAY BOXES */
+
+.box-100,
+.box-050,
+.box-033,
+.box-066,
+.box-025,
+.box-075,
+.box-016,
+.box-020 {
+   vertical-align: middle;
+	display: inline-block;
+	margin: .25em .5% .25em .5%; /* margin: 0 2% 0 2%; padding: .5em 0 .5em 0 */
+   page-break-before: avoid !important;
+   page-break-after: avoid !important;
+   page-break-inside: avoid !important;
+   page-break-before: avoid !important;
+   page-break-after: avoid !important;
+   font-size: 9pt !important;
+}
+
+.row-spacer-025em, .vspace-025em,
+.row-spacer-050em, .vspace-050em,
+.row-spacer-075em, .vspace-075em,
+.row-spacer-1em, .vspace-1em,
+.row-spacer-2em, .vspace-2em,
+.row-spacer-3em, .vspace-3em,
+.row-spacer-3em, .vspace-4em,
+.row-spacer-3em, .vspace-5em,
+.row-spacer-3em, .vspace-6em,
+.row-spacer-3em, .vspace-7em,
+.row-spacer-3em, .vspace-8em {
+	height: 0mm !important;
+}
+
+.border-bottom-widget { border: none !important; }
+
+input[type=text] { border: none !important;}
+
+.quote-dark-hdr-widget {
+   height: 100mm;
+}
+
+.fake-link { color: #262626 !important   ; }
+
+tr { border-bottom: 1px solid gray; }
+
+h3 {
+   color: red;
+}
+
+.onlyprint {
+   display: inline-block !important;
+   border: 1px solid green;
+}
+/*
+@page
+{
+    height: auto;
+
+
+    margin: 5mm 25mm 25mm 25mm;
+}
+*/
+/* this affects the margin in the printer settings */
+}
