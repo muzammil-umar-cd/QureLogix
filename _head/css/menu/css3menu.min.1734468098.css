@@ -14,11 +14,11 @@
 }
 .green-menu {
   /* border-bottom: 40px solid white; */
-  background: #df5d26;
+  background: #c3cc00;
 }
 
 .gradient-menu{
-    background: linear-gradient(to right, #df5d26, #ffdc00);
+    background: linear-gradient(to left, #00B4D7, #C3CC00);
 }
 .short-menu .green-menu {
   border-bottom: none;
@@ -47,7 +47,7 @@
   text-decoration: none;
   font-family: "Karla", sans-serif;
   cursor: pointer;
-  color: #df5d26;
+  color: #c3cc00;
 }
 .menu_container .top_menu .fake-menu-link {
   font-size: 1.2em;
@@ -86,13 +86,13 @@
   line-height: 32px !important;
   padding: 0 0.8em 0 0.8em !important;
   min-width: 120px;
-  background: #df5d26;
-  border: 2px solid #df5d26;
+  background: #c3cc00;
+  border: 2px solid #c3cc00;
 }
 .menu_container .btn-widget-medium:hover,
 .menu_container .btn-widget-medium:focus {
   background: #79ac7e;
-  border: 2px solid #df5d26;
+  border: 2px solid #c3cc00;
 }
 .menu_container .hollow-button .btn-widget-medium {
   background: #ffffff;
@@ -230,7 +230,7 @@ i.go-arrow {
   margin: 0 5px;
 }
 .bar2 {
-  background: #df5d26;
+  background: #c3cc00;
 }
 .orange-bar {
   background: #e66d3d;
@@ -271,14 +271,14 @@ i.go-arrow {
   bottom: -3em;
 }
 .menu-cart {
-  color: #df5d26;
+  color: #c3cc00;
   font-size: 1.5em;
 }
 .menu-cart:after {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   font-size: 0.6em;
-  background: #df5d26;
+  background: #c3cc00;
   color: #fff;
   border-radius: 50%;
   height: 18px;

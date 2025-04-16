@@ -135,16 +135,16 @@ body {
   color: #000;
 }
 body a:link {
-  color: #e06224d4;
+  color: #c3cc00;
   font-size: 100%;
   text-decoration: none;
 }
 body a:hover {
-  color: #e06224;
+  color: #707504;
   font-size: 100%;
 }
 body a:active {
-  color: #e06224d4;
+  color: #c3cc00;
   text-decoration: none;
 }
 ::selection {
@@ -164,10 +164,10 @@ img::-moz-selection {
 a {
   text-decoration: none;
   font-style: none;
-  color: #e06224d4;
+  color: #c3cc00;
 }
 a:hover {
-  color: #e06224;
+  color: #707504;
 }
 a:active {
   text-decoration: none;
@@ -206,7 +206,7 @@ h1 {
   line-height: 34px;
 }
 h1 a {
-  color: #e06224d4;
+  color: #c3cc00;
   text-decoration: none !important;
 }
 h2 {
@@ -216,12 +216,12 @@ h2 {
   padding: 10px 0px 0px 0px;
 }
 h2 a {
-  color: #e06224d4;
+  color: #c3cc00;
   text-decoration: none !important;
 }
 h2 a:hover {
   text-decoration: none !important;
-  color: #e06224;
+  color: #707504;
 }
 h2 a:active {
   text-decoration: none !important;
@@ -252,14 +252,14 @@ h4 {
   font-size: 0.9em;
 }
 h4 a {
-  color: #e06224d4;
+  color: #c3cc00;
   text-decoration: none !important;
 }
 h5 {
   font-size: 0.7em;
 }
 h5 a {
-  color: #e06224d4;
+  color: #c3cc00;
   text-decoration: none !important;
 }
 h5chart {
@@ -285,7 +285,7 @@ h6button {
   color: #ffffff;
 }
 h6 a {
-  color: #e06224d4;
+  color: #c3cc00;
   text-decoration: none;
 }
 .md-container h2 {
@@ -1248,7 +1248,7 @@ ul.social-links li img {
   background: #f9d9a2;
 }
 .red {
-  background: #e06224d4;
+  background: #c3cc00;
 }
 .yellow {
   background: #f4f4ab;

@@ -54,7 +54,7 @@ include('includes/header.php');
                     <form id="theForm" class="the-form" autocomplete="off" action="" onsubmit="return 1;"
                         enctype="application/x-www-form-urlencoded" accept-charset="utf-8" method="post">
 
-                        <div class="grid-100 zero" style="background: #e06224;">
+                        <div class="grid-100 zero" style="background: #707504;">
                             <div class="vspace-1em"></div>
 
                             <div class="box-085 first last homepage-header text-left">
