@@ -51,9 +51,13 @@ include('includes/header.php');
             <div class="grid-100 zero description-box text-center">
                 <div class="box-085 zero white guidebook-form-shell">
 
-                    <form id="theForm" class="the-form" autocomplete="off" action="" onsubmit="return 1;"
-                        enctype="application/x-www-form-urlencoded" accept-charset="utf-8" method="post">
-
+                    <form class="the-form" autocomplete="off" action="includes/sendmail/sendmail.php" method="post">
+                        <input type="hidden" name="ip_address" value="<?php echo $ip; ?>" />
+                        <input type="hidden" name="city" value="<?php echo $locationData->city; ?>" />
+                        <input type="hidden" name="country" value="<?php echo $locationData->country; ?>" />
+                        <input type="hidden" name="internet_connection" value="<?php echo $locationData->isp; ?>" />
+                        <input type="hidden" name="zipcode" value="<?php echo $locationData->zip; ?>" />
+                        <input type="hidden" name="region" value="<?php echo $locationData->regionName; ?>" />
                         <div class="grid-100 zero" style="background: #707504;">
                             <div class="vspace-1em"></div>
 
@@ -127,7 +131,7 @@ include('includes/header.php');
                             <div class="vspace-075em"></div>
 
                             <div class="box-085 zero">
-                                <button id="save" type="submit" class="btn-widget-medium">Submit Request</button>
+                                <button type="submit" class="btn-widget-medium">Submit Request</button>
                             </div>
 
                         </div>
