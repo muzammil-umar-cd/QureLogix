@@ -4,6 +4,6 @@
 	define('PHONE_HREF', 'tel:+14692777489'); // tel: phone
 	define('WEBSITE_NAME', 'Qure Logix'); // website name
 	define('ADMIN_EMAIL', 'info@qurelogix.com'); // website name
-	define('ADDRESS', '2828 w parker rd ste B103 plano tx 75075');
+	define('ADDRESS', '2828 W Parker RD STE B103 Plano TX 75075');
 
 ?>
