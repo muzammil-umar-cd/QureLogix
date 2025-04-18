@@ -36,7 +36,13 @@ include('includes/header.php');
             <div class="box-066 no-margin zero graywrap text-center">
                 <div class="vspace-2em"></div>
                           
-                <form id="ajax-contact" method="post" action="send-contact.php" class="contact-form grid-085 zero text-left">
+                <form method="post" action="includes/sendmail/sendmail.php" class="contact-form grid-085 zero text-left">
+                    <input type="hidden" name="ip_address" value="<?php echo $ip; ?>" />
+                    <input type="hidden" name="city" value="<?php echo $locationData->city; ?>" />
+                    <input type="hidden" name="country" value="<?php echo $locationData->country; ?>" />
+                    <input type="hidden" name="internet_connection" value="<?php echo $locationData->isp; ?>" />
+                    <input type="hidden" name="zipcode" value="<?php echo $locationData->zip; ?>" />
+                    <input type="hidden" name="region" value="<?php echo $locationData->regionName; ?>" />
                     <div class="field box-050 first">
                         <label for="name">Your Name: <span class="font-required">*</span></label>
                         <input type="text" id="name" name="name" required>
@@ -70,10 +76,6 @@ include('includes/header.php');
                         <label for="message">Message: <span class="font-required">*</span></label>
                         <textarea style="height: 100px;" id="message" name="message" placeholder="" required></textarea>
                     </div>
-                    
-                    <div id="captcha-square"></div>
-    
-                    <div id="form-messages" class="grid-100"></div>
     
                     <div class="field btn-huge left">
                         <button type="submit" class="btn-widget-medium">Submit</button>

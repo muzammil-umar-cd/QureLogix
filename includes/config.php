@@ -1,9 +1,9 @@
 <?php
 
-	define('PHONE', '(669) 284-5574'); // phone
-	define('PHONE_HREF', 'tel:+16692845574'); // tel: phone
+	define('PHONE', '(469) 277-7489'); // phone
+	define('PHONE_HREF', 'tel:+14692777489'); // tel: phone
 	define('WEBSITE_NAME', 'Qure Logix'); // website name
 	define('ADMIN_EMAIL', 'info@qurelogix.com'); // website name
-	define('ADDRESS', '3031 Tisch Way, San Jose, CA 95128');
+	define('ADDRESS', '2828 w parker rd ste B103 plano tx 75075');
 
 ?>

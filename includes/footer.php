@@ -41,7 +41,7 @@
                 <a href="javascript:;"><i class="fab fa-pinterest fa-fw"></i></a>
                 <a href="javascript:;"><i class="fab fa-instagram fa-fw"></i></a>
 
-                <p>&#169; 2025 <?php echo WEBSITE_NAME; ?> Inc. All rights reserved. <a href="privacy_policy.php">Privacy
+                <p>&#169; 2025 <?php echo WEBSITE_NAME; ?>. All rights reserved. <a href="privacy_policy.php">Privacy
                         Statement</a></p>
             </div>
         </div>

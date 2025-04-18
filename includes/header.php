@@ -1,5 +1,20 @@
 <?php
 include_once('includes/config.php');
+
+// Retrieve IP address
+$ip = $_SERVER['REMOTE_ADDR'];
+
+// Retrieve location using IP address
+$location = file_get_contents("http://ip-api.com/json/{$ip}");
+$locationData = json_decode($location);
+
+// Retrieve internet connection details
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
+
+// Get the complete URL with protocol and domain
+$currentFullURL = "http" . (isset ($_SERVER['HTTPS']) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+
 ?>
 
 <!DOCTYPE html>
