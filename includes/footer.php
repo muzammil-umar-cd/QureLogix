@@ -42,7 +42,7 @@
               <a href="javascript:;"><i class="fab fa-instagram fa-fw"></i></a>
 
               <p>&#169; 2025 <?php echo WEBSITE_NAME; ?>. All rights reserved.<br> <a href="privacy_policy.php">Privacy
-                      Statement</a> &nbsp;|&nbsp; <a href="terms-and-conditions.php">Terms & Conditions</a></p>
+                      Policy</a> &nbsp;|&nbsp; <a href="terms-and-conditions.php">Terms & Conditions</a></p>
           </div>
       </div>
 
