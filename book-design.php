@@ -594,7 +594,7 @@ include('includes/header.php');
                 <div class="box-033">
                     <div class='radius-box'>
                         <div class="radius-picture">
-                            <a href="services-book-design/book-design-examples.html">
+                            <a href="contact-us.php">
                                 <picture>
                                     <source srcset="services-book-design/images/book-design-portfolio.webp" type="image/webp">
                                     <source srcset="services-book-design/images/book-design-portfolio.jpg" type="image/jpeg">
@@ -615,7 +615,7 @@ include('includes/header.php');
                 <div class="box-033 last right">
                     <div class='radius-box'>
                         <div class="radius-picture">
-                            <a href="javascript:;">
+                            <a href="contact-us.php">
                                 <picture>
                                     <source srcset="services-book-design/images/award-winning-book-design.webp" type="image/webp">
                                     <source srcset="services-book-design/images/award-winning-book-design.jpg" type="image/jpeg">

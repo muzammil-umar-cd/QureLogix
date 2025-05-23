@@ -22,12 +22,12 @@ include('includes/header.php');
                 prices and personalized customer service. We print high quality books at affordable prices since
                 1976.
                 Start your custom
-                <a class="forest-text" href="products-book-ebook/printed-softcover-books.html">Softcover Book</a>,
-                <a class="forest-text" href="products-book-ebook/printed-hardcover-books.html">Hardcover Book</a>,
+                <a class="forest-text" href="javascript:;">Softcover Book</a>,
+                <a class="forest-text" href="javascript:;">Hardcover Book</a>,
                 or
-                <a class="forest-text" href="products-book-ebook/printed-spiral-books.html">Spiral Book</a> journey
+                <a class="forest-text" href="javascript:;">Spiral Book</a> journey
                 today by using the Book Price tool below or
-                <a class="forest-text" href="company-book-printer/contactus.html">giving us a call</a>!
+                <a class="forest-text" href="<?php echo PHONE_HREF ?>">giving us a call</a>!
             </p>
 
             <div class="vspace-2em"></div>
@@ -324,7 +324,7 @@ include('includes/header.php');
                     review your book at every stage of production to ensure the highest quality. Use our Get a Price
                     Tool to explore all our custom features.</p>
 
-                <p><a href="quoting/quote?go=new">Get a quote &nbsp;<i class="fas fa-arrow-right"></i></a>
+                <p><a href="catalog.php">Get a quote &nbsp;<i class="fas fa-arrow-right"></i></a>
                 </p>
             </div>
 
@@ -363,12 +363,12 @@ include('includes/header.php');
                     your book with advice on marketing, book design, and book printing costs. Includes
                     pricing and design tips for softcover, hardcover, and spiral book bindings.</p>
 
-                <p><a href="home-book-printer/catalog.php">Learn More &nbsp;<i class="fas fa-arrow-right"></i></a>
+                <p><a href="catalog.php">Learn More &nbsp;<i class="fas fa-arrow-right"></i></a>
                 </p>
             </div>
 
             <div class="box-050 last text-right">
-                <a href="home-book-printer/catalog.php">
+                <a href="catalog.php">
                     <picture>
                         <source srcset="make-a-book-guide.png" type="image/webp">
                         <source srcset="make-a-book-guide.png" type="image/jpeg">
@@ -386,7 +386,7 @@ include('includes/header.php');
 
         <div class="grid-100 thankyou zero">
             <div class="box-050 first text-left">
-                <a href="services-book-design/book-design-home.html">
+                <a href="book-design.php">
                     <picture>
                         <source srcset="book-design-company.jpg" type="image/webp">
                         <source srcset="book-design-company.jpg" type="image/jpeg">
@@ -405,7 +405,7 @@ include('includes/header.php');
                     books, and more. We offer three design levels to match your book's complexity and
                     budget.</p>
 
-                <p><a href="services-book-design/book-design-home.html">Learn More &nbsp;<i
+                <p><a href="book-design.php">Learn More &nbsp;<i
                             class="fas fa-arrow-right"></i></a></p>
             </div>
         </div>
@@ -425,13 +425,13 @@ include('includes/header.php');
             <p>With our unbeatable customer service, you can talk to a real person now
                 to get your book printed or learn more.</p>
 
-            <a href="company-book-printer/contactus.html" class="btn-huge">
+            <a href="contact-us.php" class="btn-huge">
                 <button type="button" class="btn-widget-medium"> Contact Us </button>
             </a>
 
             <div class="grid-100 text-center phone-email">
-                <span><i class="fas fa-phone"></i> <a href="tel:1-800-837-0970">(360) 623-1323</a></span>
-                <span><i class="fas fa-envelope"></i> <a href="company-book-printer/contactus.html">Email
+                <span><i class="fas fa-phone"></i> <a href="<?php echo PHONE_HREF; ?>"><?php echo PHONE; ?></a></span>
+                <span><i class="fas fa-envelope"></i> <a href="<?php echo ADMIN_EMAIL; ?>">Email
                         Us</a></span>
             </div>
         </div>

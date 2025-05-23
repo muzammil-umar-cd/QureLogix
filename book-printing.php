@@ -454,7 +454,7 @@ include('includes/header.php');
         </div>
         
         <div class="grid-100 text-center btn-huge">
-            <a href="products-book-ebook/premium-add-ons.html" class="no-dec-font">
+            <a href="catalog.php" class="no-dec-font">
                 <button type="button" class="btn-widget-medium"> See All Premium Features </button>
             </a>
         </div>
