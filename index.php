@@ -431,7 +431,7 @@ include('includes/header.php');
 
             <div class="grid-100 text-center phone-email">
                 <span><i class="fas fa-phone"></i> <a href="<?php echo PHONE_HREF; ?>"><?php echo PHONE; ?></a></span>
-                <span><i class="fas fa-envelope"></i> <a href="<?php echo ADMIN_EMAIL; ?>">Email
+                <span><i class="fas fa-envelope"></i> <a href="mailto:<?php echo ADMIN_EMAIL; ?>">Email
                         Us</a></span>
             </div>
         </div>
