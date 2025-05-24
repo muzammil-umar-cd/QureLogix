@@ -701,7 +701,7 @@ include('includes/header.php');
 		
 		<div class="grid-100 vspace-3em"></div>
 		
-		<a href="/home-book-printer/catalog">
+		<a href="/catalog.php">
             <div class="guidebook-banner">
                 <div class="grid-100 zero"> 
                     <div class="box-040 first"></div>
@@ -723,7 +723,7 @@ include('includes/header.php');
             </div>
         </a>
         
-        <a href="/home-book-printer/catalog" class="no-dec-font mobile-show">
+        <a href="/catalog.php" class="no-dec-font mobile-show">
             <button type="button" class="btn-widget-medium"> Request Guidebook </button>
         </a>
         
